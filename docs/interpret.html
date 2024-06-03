@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>CURE ID - Procedure</title>
+<title>CURE ID - Interpretation</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -80,7 +80,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./sop.html">Process</a></li><li class="breadcrumb-item"><a href="./sop.html">Procedure</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./sop.html">Process</a></li><li class="breadcrumb-item"><a href="./interpret.html">Interpretation</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -133,13 +133,13 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./sop.html" class="sidebar-item-text sidebar-link active">
+  <a href="./sop.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Procedure</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./interpret.html" class="sidebar-item-text sidebar-link">
+  <a href="./interpret.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Interpretation</span></a>
   </div>
 </li>
@@ -178,26 +178,23 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#omop-cohort-creation-and-de-identification-guide" id="toc-omop-cohort-creation-and-de-identification-guide" class="nav-link active" data-scroll-target="#omop-cohort-creation-and-de-identification-guide">OMOP Cohort Creation and De-identification Guide</a>
+  <li><a href="#cure-id-profile-scripts-output-interpretation" id="toc-cure-id-profile-scripts-output-interpretation" class="nav-link active" data-scroll-target="#cure-id-profile-scripts-output-interpretation">CURE ID Profile Scripts – Output &amp; Interpretation</a>
   <ul class="collapse">
-  <li><a href="#concept-table-creation-script" id="toc-concept-table-creation-script" class="nav-link" data-scroll-target="#concept-table-creation-script"><u>00 – Concept Table Creation Script</u></a></li>
-  <li><a href="#cohort-creation-script" id="toc-cohort-creation-script" class="nav-link" data-scroll-target="#cohort-creation-script"><u>01 – Cohort Creation Script</u></a></li>
-  <li><a href="#cure-id-tables-script" id="toc-cure-id-tables-script" class="nav-link" data-scroll-target="#cure-id-tables-script"><u>02 – CURE ID Tables Script</u></a></li>
-  <li><a href="#replace-rare-conditions-script" id="toc-replace-rare-conditions-script" class="nav-link" data-scroll-target="#replace-rare-conditions-script"><u>03 – Replace Rare Conditions Script</u></a></li>
-  <li><a href="#deidentified-data-ddl-script" id="toc-deidentified-data-ddl-script" class="nav-link" data-scroll-target="#deidentified-data-ddl-script"><u>04 – Deidentified Data DDL Script</u></a></li>
-  <li><a href="#deidentification-script" id="toc-deidentification-script" class="nav-link" data-scroll-target="#deidentification-script"><u>05 – Deidentification Script</u></a></li>
-  <li><a href="#quality-checks-script-optional" id="toc-quality-checks-script-optional" class="nav-link" data-scroll-target="#quality-checks-script-optional"><u>06 – Quality Checks Script (optional)</u></a></li>
-  <li><a href="#cohort-profile-scripts" id="toc-cohort-profile-scripts" class="nav-link" data-scroll-target="#cohort-profile-scripts"><u>07 – Cohort Profile Scripts</u></a></li>
+  <li><a href="#a_condition_profile.sql" id="toc-a_condition_profile.sql" class="nav-link" data-scroll-target="#a_condition_profile.sql">07_A_condition_profile.sql</a></li>
+  <li><a href="#b_measurement_profile.sql" id="toc-b_measurement_profile.sql" class="nav-link" data-scroll-target="#b_measurement_profile.sql">07_B_measurement_profile.sql</a></li>
+  <li><a href="#c_drug_exposure_profile.sql" id="toc-c_drug_exposure_profile.sql" class="nav-link" data-scroll-target="#c_drug_exposure_profile.sql">07_C_drug_exposure_profile.sql</a></li>
+  <li><a href="#e_device_profile.sql" id="toc-e_device_profile.sql" class="nav-link" data-scroll-target="#e_device_profile.sql">07_E_device_profile.sql</a></li>
   </ul></li>
+  <li><a href="#omop-table-and-field-basics" id="toc-omop-table-and-field-basics" class="nav-link" data-scroll-target="#omop-table-and-field-basics">OMOP Table and Field Basics</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./sop.html">Process</a></li><li class="breadcrumb-item"><a href="./sop.html">Procedure</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./sop.html">Process</a></li><li class="breadcrumb-item"><a href="./interpret.html">Interpretation</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Procedure</h1>
+<h1 class="title">Interpretation</h1>
 </div>
 
 
@@ -214,174 +211,101 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="omop-cohort-creation-and-de-identification-guide" class="level2">
-<h2 class="anchored" data-anchor-id="omop-cohort-creation-and-de-identification-guide">OMOP Cohort Creation and De-identification Guide</h2>
-<div class="cell">
-<div class="cell-output cell-output-stderr">
-<pre><code>Updated: 7/26/2023</code></pre>
+<section id="cure-id-profile-scripts-output-interpretation" class="level2">
+<h2 class="anchored" data-anchor-id="cure-id-profile-scripts-output-interpretation">CURE ID Profile Scripts – Output &amp; Interpretation</h2>
+<p>This section provides synthetic examples of the output generated from the CURE ID person measurement drug exposure and device profile SQL scripts as well as examples of how to interpret the output from each script.</p>
+<section id="a_condition_profile.sql" class="level3">
+<h3 class="anchored" data-anchor-id="a_condition_profile.sql">07_A_condition_profile.sql</h3>
+<p>Generates a table showing condition prevalence in cohort by individual condition concept.</p>
+<p>Example Interpretation</p>
+<p>In the highlighted row, the table shows that 6499 patients in the cohort have a recorded diagnosis of hypertension, representing 58% of the total cohort.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/Profile_script_7A.png" class="img-fluid figure-img"></p>
+<figcaption>Profile_script_7A</figcaption>
+</figure>
 </div>
+</section>
+<section id="b_measurement_profile.sql" class="level3">
+<h3 class="anchored" data-anchor-id="b_measurement_profile.sql">07_B_measurement_profile.sql</h3>
+<p>Generates a table which includes the measurement concepts included in the cohort and their names.</p>
+<p>Example Interpretation</p>
+<p>The highlighted row shows the distribution of the number of times heart rate was measured per patient in the cohort. 25% of the patients had 17 heart rate measurements or less. 50% of patients had at least 34 heart rate measurements recorded. 75% of patients had at most, 72 heart rate measurements recorded. 95% of patients had at most, 398 heart rate measurements recorded. The four columns can also be interpreted as the median for the bottom 50% (percentile_25), overall median (median), median for the top 50% (percentile_75), and the median for the top 10% (percentile_95) – in terms of how many times the measurement was taken for each patient in the cohort.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/Profile_script_7B.png" class="img-fluid figure-img"></p>
+<figcaption>Profile_script_7B</figcaption>
+</figure>
 </div>
-<p>The following scripts are to be run on a site’s full OMOP dataset in order to prepare the relevant data for sharing with the VIRUS registry. Each script should be run on the same server as the OMOP data but can be customized to run on the preferred Database and Schema.</p>
-<p><strong>Instructions:</strong> Replace the database name and schema in each of these scripts with your own, then run the cohort creation and deidentification scripts in the following sequence:</p>
-<section id="concept-table-creation-script" class="level3">
-<h3 class="anchored" data-anchor-id="concept-table-creation-script"><u>00 – Concept Table Creation Script</u></h3>
-<p><strong>Filename</strong>: <a href="https://github.com/OHDSI/CureIdRegistry/blob/main/Cohort%20curation%20scripts/00_CURE_ID_create_concept_table.sql">00_CURE_ID_create_concept_table.sql)</a></p>
-<p><strong>Purpose</strong>: This script creates a table of standard concepts required for the CureID Registry project. It is used in conjunction with CONCEPT_ANCESTOR table in 02_CURE_ID_All_Tables.sql script.</p>
-<p><strong>Description</strong>: Fields particularly important to the process are “is_standard” and “include_descendants”.</p>
-<p>“is_standard” determines the standardization of the concept, either: a “C”, “S”, or “N” – C is for classification. This concept will not be used, but it may have useable descendants – S is for Standard. These codes will be used. They may or may not have descendants – N is Non-standard. These codes will not be used. If they have descendants</p>
-<p>“include_descendants” determines whether the script should look for descendents – Values are either TRUE or FALSE</p>
-<p>They will be used in 02_CURE_ID_All_Tables.sql in the FROM clauses: Measurement example: INNER JOIN omop.CONCEPT_ANCESTOR ON descendant_concept_id = m.measurement_concept_id INNER JOIN [Results].[cure_id_concepts] ON ancestor_concept_id = concept_id WHERE domain = ‘Measurement’ AND (include_descendants = ‘TRUE’ OR ancestor_concept_id = descendant_concept_id)</p>
-<p>If “include_descendants” is either ‘TRUE’ or if the ancestor_concept_id is the same as descendant_concept_id, the concept will be used. The “is_standard” field is informational only and does not participate in the script.</p>
-<p><strong>Dependencies</strong>: None</p>
 </section>
-<section id="cohort-creation-script" class="level3">
-<h3 class="anchored" data-anchor-id="cohort-creation-script"><u>01 – Cohort Creation Script</u></h3>
-<p><strong>Filename</strong>: <a href="https://github.com/OHDSI/CureIdRegistry/blob/main/Cohort%20curation%20scripts/01_CURE_ID_Cohort.sql">01_CURE_ID_Cohort.sql</a></p>
-<p><strong>Purpose</strong>: This script creates a cohort of patients for the CURE ID registry. The patient list is saved in the cohort table, along with other useful data elements.</p>
-<p><strong>Description</strong>: This SQL script creates a cohort of COVID-positive hospitalized patients based on specific criteria. The script performs several steps to identify and filter the patients before finally creating the cohort table. The script sets the context to use a specific database, but the actual name of the database is meant to be provided by the user.</p>
-<p><strong>Dependencies</strong>: None</p>
-<p><strong>Steps</strong>:</p>
-<ol type="1">
-<li><p>Create cohort table.</p></li>
-<li><p>Identify patients (inpatient and outpatient) with covid positive lab results</p>
-<ul>
-<li><p>Use OMOP concepts that represent the LOINC codes for SARS-COV-2 nucleic acid test</p></li>
-<li><p>The concept ids here represent LOINC or SNOMED codes for standard ways to code a lab that is positive.</p></li>
-</ul></li>
-<li><p>Identify the first positive covid test per patient (after January 1, 2020).</p></li>
-<li><p>Limit to covid-positive patients with inpatient encounters.</p></li>
-<li><p>Apply all inclusion/exclusion criteria to identify all patients hospitalized with symptomatic covid-19 up to 21 days after a positive SARS-CoV-2 test or up to 7 days prior to a positive SARS-CoV-2 test</p></li>
-<li><p>Find the closest inpatient encounter to first positive SARS-COV-2 test (for patients hospitalized more than once)</p></li>
-<li><p>Account for edge cases where patients have two hospitalizations same number of absolute days from SARS-COV-2 test (Ex: Patient hospitalized separately 3 days before and 3 days after SARS-COV-2 test)</p></li>
-<li><p>Create the cohort by adding on birth date and death date</p></li>
-</ol>
+<section id="c_drug_exposure_profile.sql" class="level3">
+<h3 class="anchored" data-anchor-id="c_drug_exposure_profile.sql">07_C_drug_exposure_profile.sql</h3>
+<p>Generates a table of all drugs given in the cohort.</p>
+<p>Example Interpretation</p>
+<p>The highlighted row shows that acetaminophen was administered to 7,937 total patients which represents 68% of the patients in the cohort. Acetaminophen was administered an average of 2 times per patient with the highest recorded value of 26 administrations for a single patient.<br>
+It is important to note that these are <em>ingredients</em> - which is why sodium chloride is the most frequent “drug” because most IV drugs contain sodium chloride as an ingredient.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/Profile_script_7C.png" class="img-fluid figure-img"></p>
+<figcaption>Profile_script_7C</figcaption>
+</figure>
+</div>
 </section>
-<section id="cure-id-tables-script" class="level3">
-<h3 class="anchored" data-anchor-id="cure-id-tables-script"><u>02 – CURE ID Tables Script</u></h3>
-<p><strong>Filename</strong>: <a href="https://github.com/OHDSI/CureIdRegistry/blob/main/Cohort%20curation%20scripts/02_CURE_ID_All_Tables.sql">02_CURE_ID_All_Tables.sql</a></p>
-<p><strong>Purpose</strong>: This script takes your OMOP dataset and generates a copy of key tables that have been filtered down to only include people and records related to the CURE ID registry.</p>
-<p><strong>Description</strong>: Creates CURE_ID tables from the generated CURE_ID cohort.</p>
-<p><strong>Dependencies</strong>: - 01_CURE_ID_Cohort.sql</p>
-<p><strong>Steps</strong>:</p>
-<ol type="1">
-<li><p>Load Person table</p></li>
-<li><p>Load Measurements table</p></li>
-<li><p>Load Drug Exposure table</p></li>
-<li><p>Load Death table</p></li>
-<li><p>Load Observation data</p></li>
-<li><p>Load Procedure Occurrence Table</p></li>
-<li><p>Load Condition Occurrence Table</p></li>
-<li><p>Load Visit Occurrence table</p></li>
-<li><p>Load Device Exposure tabledb</p></li>
-</ol>
+<section id="e_device_profile.sql" class="level3">
+<h3 class="anchored" data-anchor-id="e_device_profile.sql">07_E_device_profile.sql</h3>
+<p>Generates a table which includes the device concepts included in the cohort and their counts.</p>
+<p>Example Interpretation</p>
+<p>The highlighted row shows that an oxygen nasal cannula device was used for 9,238 patients in the cohort. That patients count represents 44% of the total cohort. Use of this device was recorded an average of 225.3 times per patient, with a maximum of 7,239 recordings for a single patient, when counting all flowsheet entries.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/Profile_script_7E.png" class="img-fluid figure-img"></p>
+<figcaption>Profile_script_7E</figcaption>
+</figure>
+</div>
 </section>
-<section id="replace-rare-conditions-script" class="level3">
-<h3 class="anchored" data-anchor-id="replace-rare-conditions-script"><u>03 – Replace Rare Conditions Script</u></h3>
-<p><strong>Filename</strong>: <a href="https://github.com/OHDSI/CureIdRegistry/blob/main/Cohort%20curation%20scripts/03_CURE_ID_replace_rare_conditions_with_parents.sql">03_CURE_ID_replace_rare_conditions_with_parents.sql</a></p>
-<p><strong>Purpose</strong>: Replace conditions occurring 10 or less times in the dataset with parent concepts that have at least 10 counts</p>
-<p><strong>Description</strong>: This script is run after scripts 01 and 02</p>
-<p><strong>Dependencies</strong>: - 01_CURE_ID_Cohort.sql - 02_CURE_ID_All_Tables.sql</p>
-<p><strong>Steps</strong>:</p>
-<ol type="1">
-<li><p>Condition roll up: concepts are mapped to their corresponding ancestor concept(s)</p></li>
-<li><p>Create table that counts the ancestor concepts for each original concept</p></li>
-<li><p>Create table that counts the original concepts</p></li>
-<li><p>Filter to only include conditions that have more than 10 counts</p></li>
-<li><p>Get just the most specific condition in the ancestor-descendent hierarchy</p></li>
-</ol>
 </section>
-<section id="deidentified-data-ddl-script" class="level3">
-<h3 class="anchored" data-anchor-id="deidentified-data-ddl-script"><u>04 – Deidentified Data DDL Script</u></h3>
-<p><strong>Filename</strong>: <a href="https://github.com/OHDSI/CureIdRegistry/blob/main/Cohort%20curation%20scripts/04_DE_ID_CDM_Table_ddl.sql">04_DE_ID_CDM_Table_ddl.sql</a></p>
-<p><strong>Purpose</strong>: Generate the necessary tables for the de-identified version of the CURE ID Cohort</p>
-<p><strong>Description</strong>: This script will create tables in the Results schema and preface the table names with ‘deident.’ However, the preface can be set to whatever value you desire.</p>
-<p><strong>Dependencies</strong>: None</p>
-<p><strong>Steps</strong>:</p>
-<ol type="1">
-<li><p>Create the Person table</p></li>
-<li><p>Create the Death table</p></li>
-<li><p>Create the Visit Occurrence table</p></li>
-<li><p>Create the Drug Exposure table</p></li>
-<li><p>Create the Device Exposure table</p></li>
-<li><p>Create the Condition Occurrence table</p></li>
-<li><p>Create the Measurement table</p></li>
-<li><p>Create the Observation table</p></li>
-</ol>
+<section id="omop-table-and-field-basics" class="level2">
+<h2 class="anchored" data-anchor-id="omop-table-and-field-basics">OMOP Table and Field Basics</h2>
+<p>Adapted from OHDSI CDM Site: <a href="https://ohdsi.github.io/CommonDataModel/dataModelConventions.html">Data Model Conventions</a>&nbsp;</p>
+<section id="tables" class="level4">
+<h4 class="anchored" data-anchor-id="tables">Tables</h4>
+<p>For the tables of the main domains of the CDM it is imperative that concepts used are strictly limited to the domain. For example, the CONDITION_OCCURRENCE table contains only information about conditions (diagnoses, signs, symptoms), but no information about procedures. Not all source coding schemes adhere to such rules. For example, ICD-9-CM codes, which contain mostly diagnoses of human disease, also contain information about the status of patients having received a procedure. The ICD-9-CM code V20.3 ‘Newborn health supervision’ defines a continuous procedure and is therefore stored in the PROCEDURE_OCCURRENCE table.</p>
 </section>
-<section id="deidentification-script" class="level3">
-<h3 class="anchored" data-anchor-id="deidentification-script"><u>05 – Deidentification Script</u></h3>
-<p><strong>Filename</strong>: <a href="https://github.com/OHDSI/CureIdRegistry/blob/main/Cohort%20curation%20scripts/05_DE_ID_script.sql">05_DE_ID_script.sql</a></p>
-<p><strong>Purpose</strong>: This script creates a copy of the Cohort and removes identifying characteristics to prepare the data for sharing with the VIRUS registry.</p>
-<p><strong>Description</strong>: Run this script to generate a deidentified copy of your target data. The following actions are performed: - Reassignment of Person IDs: Person IDs are regenerated sequentially from a sorted copy of the Person table. These new Person IDs are carried throughout the CDM to all tables that reference it.</p>
-<ul>
-<li><p>Date Shifting: Each person is assigned a random date shift value between -186 and +186 days. All dates for that person are then shifted shifted by that amount.</p></li>
-<li><p>Birthdays: After date shifting a person’s birthday, the day is then set to the first of the new birth month. If the person would be &gt; 89 years old then they are assigned a random birth year that would make them 90-99 years old.</p></li>
-<li><p>Date Truncation: A user-defined Start and End date are used to exclude any date shifted data that falls outside of the target date range (e.g.&nbsp;procedures, conditions occurrences, etc.). Does not include Birthdates.</p></li>
-<li><p>Removal of Other Identifiers: Other potentially identifying datapoints are removed from the dataset such as location_id, provider_id, and care_site_id</p></li>
-</ul>
-<p><strong>Dependencies</strong>: - 01_CURE_ID_Cohort.sql - 02_CURE_ID_All_Tables.sql - 03_CURE_ID_replace_rare_conditions_with_parents.sql - 04_DE_ID_CDM_Table_ddl.sql</p>
-<p><strong>Steps</strong>:</p>
-<ol type="1">
-<li><p>Use find and replace to set source and target DB and Schema names</p></li>
-<li><p>Load the OMOP Person table, and de-identify</p></li>
-<li><p>Load the OMOP Visit Occurrence table, and de-identify</p></li>
-<li><p>Load the OMOP Condition Occurrence table, and de-identify</p></li>
-<li><p>Load the OMOP Procedure Occurrence table, and de-identify</p></li>
-<li><p>Load the OMOP Drug Exposure table, and de-identify</p></li>
-<li><p>Load the OMOP Observation table, and de-identify</p></li>
-<li><p>Load the OMOP Death table, and de-identify</p></li>
-<li><p>Load the OMOP Device Exposure table, and de-identify</p></li>
-<li><p>Load the OMOP Measurement table, and de-identify</p></li>
-</ol>
-</section>
-<section id="quality-checks-script-optional" class="level3">
-<h3 class="anchored" data-anchor-id="quality-checks-script-optional"><u>06 – Quality Checks Script (optional)</u></h3>
-<p><strong>Filename</strong>: <a href="https://github.com/OHDSI/CureIdRegistry/blob/main/Cohort%20curation%20scripts/06_DE_ID_Quality_Checks.sql">06_DE_ID_Quality_Checks.sql</a></p>
-<p><strong>Purpose</strong>: This script checks basic metrics for each table in the deidentified dataset to ensure the previous scripts were successful.</p>
-<p><strong>Description</strong>: This script runs a number of summary level quality checks for each table to audit basic data counts and date ranges.</p>
-<p><strong>Dependencies</strong>: - 01_CURE_ID_Cohort.sql - 02_CURE_ID_All_Tables.sql - 03_CURE_ID_replace_rare_conditions_with_parents.sql - 04_DE_ID_CDM_Table_ddl.sql - 05_DE_ID_script.sql</p>
-<p><strong>Steps</strong>:</p>
-<ol type="1">
-<li><p>Count distinct person_ids and find the maximum and minimum birthdates in the OMOP Person table.</p></li>
-<li><p>Count distinct person_ids in the OMOP Death table.</p></li>
-<li><p>Count distinct person_ids, count number of records per observation_concept_id, and find the maximum and minimum observation dates for all records in the OMOP Observation table.</p></li>
-<li><p>Count distinct person_ids, count number of records per procedure_concept_id, and find the maximum and minimum procedure dates for all records in the OMOP Procedure Occurrence table.</p></li>
-<li><p>Count distinct person_ids, count number of records per condition_concept_id, and find the maximum and minimum condition dates for all records in the OMOP Condition Occurrence table.</p></li>
-<li><p>Count distinct person_ids, count number of records per measurement_concept_id, and find the maximum and minimum measurement dates for all records in the OMOP Measurement table.</p></li>
-<li><p>Count distinct person_ids, count number of records per device_concept_id, and find the maximum and minimum device exposure dates for all records in the OMOP Device Exposure table.</p></li>
-<li><p>Count distinct person_ids, count number of records per drug_concept_id, and find the maximum and minimum drug exposure dates for all records in the OMOP Drug Exposure table.</p></li>
-</ol>
-</section>
-<section id="cohort-profile-scripts" class="level3">
-<h3 class="anchored" data-anchor-id="cohort-profile-scripts"><u>07 – Cohort Profile Scripts</u></h3>
-<p><strong>Dependencies</strong>: These scripts require the populated deidentified OMOP tables generated from the sequence of running scripts 1-5:</p>
-<ul>
-<li><p>01_CURE_ID_Cohort.sql</p></li>
-<li><p>02_CURE_ID_All_Tables.sql</p></li>
-<li><p>03_CURE_ID_replace_rare_conditions_with_parents.sql</p></li>
-<li><p>04_DE_ID_CDM_Table_ddl.sql</p></li>
-<li><p>05_DE_ID_script.sql</p>
-<p>##### 07-A – Condition Profile</p>
-<p><strong>Filename</strong>: 07_A_condition_profile.sql</p>
-<p><strong>Purpose</strong>: Generate a profile of condition prevalence in the final cohort.</p>
-<p><strong>Description</strong>: Condition counts are calculated per patient and are aggregated by parent concepts for each condition concept present in the final OMOP Condition Occurrence table.</p>
-<p>##### 07-B – Measurement Profile</p>
-<p><strong>Filename</strong>: 07_B_measurement_profile.sql</p>
-<p><strong>Purpose</strong>: Generate a profile of measurement prevalence in the final cohort.</p>
-<p><strong>Description</strong>: Measurement counts are calculated per patient and are aggregated by parent concepts for each measurement concept present in the final OMOP Measurement table.</p>
-<p>##### 07-C – Drug Exposure Profile</p>
-<p><strong>Filename</strong>: 07_C_drug_exposure_profile.sql</p>
-<p><strong>Purpose</strong>: Generate a profile of drug prevalence in the final cohort.</p>
-<p><strong>Description</strong>: Drug counts are calculated per patient and are aggregated by ingredient for each drug concept present in the final OMOP Drug Exposure table.</p>
-<p>##### 07-D – Unmapped Drugs Profile</p>
-<p><strong>Filename</strong>: 07_D_review_unmapped_drugs.sql</p>
-<p><strong>Purpose</strong>: Generate a profile of drugs that are not mapped to drug_concept_ids in the final cohort.</p>
-<p><strong>Description</strong>: This file filters drugs that were unsuccessfully mapped to a drug_concept_id when running the 02_CURE_ID_All_Tables.sql script. Drug source values for which the drug_concept_id is “0” and have at least 20 instances in the final cohort are aggregated for manual review. ** Drug source values can contain PHI. Please review the output for PHI before sharing.</p>
-<p>##### 07-E – Device Profile</p>
-<p><strong>Filename</strong>: 07_E_device_profile.sql</p>
-<p><strong>Purpose</strong>: Generate a profile of device prevalence in the final cohort.</p>
-<p><strong>Description</strong>: Device counts are calculated per patient and are aggregated by parent concepts for each device concept present in the final OMOP Device Exposure table.</p></li>
-</ul>
+<section id="fields" class="level4">
+<h4 class="anchored" data-anchor-id="fields">Fields</h4>
+<p>Variable names across all tables follow one convention:</p>
+<table class="table">
+<tbody>
+<tr class="odd">
+<td><strong>Notation</strong></td>
+<td><strong>Description</strong></td>
+</tr>
+<tr class="even">
+<td>_SOURCE_VALUE</td>
+<td>Verbatim information from the source data, typically used in ETL to map to CONCEPT_ID, and not to be used by any standard analytics. For example, CONDITION_SOURCE_VALUE = ‘787.02’ was the ICD-9 code captured as a diagnosis from the administrative claim.</td>
+</tr>
+<tr class="odd">
+<td>_ID</td>
+<td>Unique identifiers for key entities, which can serve as foreign keys to establish relationships across entities. For example, PERSON_ID uniquely identifies each individual. VISIT_OCCURRENCE_ID uniquely identifies a PERSON encounter at a point of care.</td>
+</tr>
+<tr class="even">
+<td>_CONCEPT_ID</td>
+<td>Foreign key into the Standardized Vocabularies (i.e.&nbsp;the standard_concept attribute for the corresponding term is true), which serves as the primary basis for all standardized analytics. For example, CONDITION_CONCEPT_ID = <a href="http://athena.ohdsi.org/search-terms/terms/31967">31967</a> contains the reference value for the SNOMED concept of ‘Nausea’</td>
+</tr>
+<tr class="odd">
+<td>_SOURCE_CONCEPT_ID</td>
+<td>Foreign key into the Standardized Vocabularies representing the concept and terminology used in the source data, when applicable. For example, CONDITION_SOURCE_CONCEPT_ID = <a href="http://athena.ohdsi.org/search-terms/terms/45431665">45431665</a> denotes the concept of ‘Nausea’ in the Read terminology; the analogous CONDITION_CONCEPT_ID might be 31967, since SNOMED-CT is the Standardized Vocabulary for most clinical diagnoses and findings.</td>
+</tr>
+<tr class="even">
+<td>_TYPE_CONCEPT_ID</td>
+<td>Delineates the origin of the source information, standardized within the Standardized Vocabularies. For example, DRUG_TYPE_CONCEPT_ID can allow analysts to discriminate between ‘Pharmacy dispensing’ and ’Prescription written</td>
+</tr>
+</tbody>
+</table>
+<p>For more information, see:</p>
+<p><a href="https://ohdsi.github.io/CommonDataModel/dataModelConventions.html#Data_Model_Conventions">Data Model Conventions</a></p>
+<p><a href="https://ohdsi.github.io/CommonDataModel/drug_dose.html">How to Calculate Drug Dose</a>&nbsp;</p>
+<p><a href="https://ohdsi.github.io/CommonDataModel/cdm53.html#Clinical_Data_Tables">Clinical Data Tables</a>&nbsp;</p>
 
 
 </section>
