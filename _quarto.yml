@@ -13,8 +13,10 @@ website:
       - section: "Process"
         contents:
           - sop.qmd
+          - interpret.qmd
       - section: "Support"
         contents:
+          - support.qmd
           - about.qmd
 
 format:
