@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>CURE ID - C-PATH / JH guide to getting started with OMOP for CURE ID</title>
+<title>CURE ID</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -80,7 +80,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Intro</a></li><li class="breadcrumb-item"><a href="./index.html">C-PATH / JH guide to getting started with OMOP for CURE ID</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Intro</a></li><li class="breadcrumb-item"><a href="./index.html">CURE ID</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -117,7 +117,13 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">C-PATH / JH guide to getting started with OMOP for CURE ID</span></a>
+ <span class="menu-text">CURE ID</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Getting Started</span></a>
   </div>
 </li>
       </ul>
@@ -174,29 +180,14 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#welcome" id="toc-welcome" class="nav-link active" data-scroll-target="#welcome">Welcome</a></li>
-  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction">Introduction</a></li>
-  <li><a href="#getting-started" id="toc-getting-started" class="nav-link" data-scroll-target="#getting-started">Getting started</a></li>
-  <li><a href="#cure-id-technical-support-checklist" id="toc-cure-id-technical-support-checklist" class="nav-link" data-scroll-target="#cure-id-technical-support-checklist">CURE ID technical support checklist</a></li>
-  <li><a href="#omop-extract-transform-and-load-guide" id="toc-omop-extract-transform-and-load-guide" class="nav-link" data-scroll-target="#omop-extract-transform-and-load-guide">OMOP Extract, Transform, and Load Guide</a>
-  <ul class="collapse">
-  <li><a href="#ohdsi-etl-resources" id="toc-ohdsi-etl-resources" class="nav-link" data-scroll-target="#ohdsi-etl-resources"><u>OHDSI ETL Resources</u></a></li>
-  <li><a href="#ohdsi-etl-steps" id="toc-ohdsi-etl-steps" class="nav-link" data-scroll-target="#ohdsi-etl-steps"><u>OHDSI ETL Steps</u></a></li>
-  <li><a href="#places-to-connect" id="toc-places-to-connect" class="nav-link" data-scroll-target="#places-to-connect"><u>Places to Connect</u></a></li>
-  </ul></li>
-  </ul>
-</nav>
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Intro</a></li><li class="breadcrumb-item"><a href="./index.html">C-PATH / JH guide to getting started with OMOP for CURE ID</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Intro</a></li><li class="breadcrumb-item"><a href="./index.html">CURE ID</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">C-PATH / JH guide to getting started with OMOP for CURE ID</h1>
+<h1 class="title">CURE ID</h1>
 </div>
 
 
@@ -219,150 +210,8 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="welcome" class="level2">
-<h2 class="anchored" data-anchor-id="welcome">Welcome</h2>
-<p>This site is designed to provide guidance, scripts and resources for sites transitioning data to OMOP common data model as part of CURE ID.</p>
-<p>CURE ID is a platform designed and developed by the US Food and Drug Administration (FDA) and the National Institutes of Health (NIH) National Center for Translational Sciences (NCATS) to capture real world data (RWD) about how existing drugs are used in new ways (e.g., drug repurposing) to treat diseases of high unmet clinical need. The documentation on this site is part of a project funded by the US Department of Health and Human Services (HHS) Assistant Secretary for Planning and Evaluation (ASPE)’s Patient-Centered Outcomes Research Trust Fund (under Interagency Agreement #75F40121S35006) to develop and disseminate tools facilitating the extraction of RWD from the electronic health record (EHR).</p>
-</section>
-<section id="introduction" class="level2">
-<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
-<p>The goals of OMOP are to gain better understanding of human health by improving our ability to analyze observational health data.</p>
-<p>Health data is stored by individual health systems in unique ways which limits the ability to collaborate and learn from larger populations. This is a problem because certain clinical conditions are infrequent and it is important to have sufficient number of cases to perform statistical tests. De-identified data shared across institutions has the promise of allowing scientists to develop important insights about health which is the motivation to enable greater collaboration.</p>
-<section id="what-is-a-common-data-model" class="level4">
-<h4 class="anchored" data-anchor-id="what-is-a-common-data-model">What is a common data model?</h4>
-<p>A common data model (CDM) allows multiple health care systems with their individual databases to join forces creating greater populations which can power more compelling scientific studies. A simple way to think about this is the difficulty of finding the silverware drawer in a new kitchen – if there is a unifying rule for where the silverware drawer is located in every kitchen (immediately to right of the sink) it makes it possible to find this much easier. A common data model creates a system so that data elements like “systolic blood pressure” or “sepsis” are recorded and organized in the same way. OMOP stands for Observational Medical Outcomes Partnership and is the common data model of the <a href="https://www.ohdsi.org/">Observational Health Data Sciences and Informatics</a> program.</p>
-</section>
-<section id="what-is-an-etl" class="level4">
-<h4 class="anchored" data-anchor-id="what-is-an-etl">What is an ETL?</h4>
-<p>ETL stands for Extract, Transform, and Load. Essentially this is the process of mapping data from one system to another. Please see [The Book of OHDSI, Chapter 6] (https://ohdsi.github.io/TheBookOfOhdsi/ExtractTransformLoad.html).</p>
-</section>
-</section>
-<section id="getting-started" class="level2">
-<h2 class="anchored" data-anchor-id="getting-started">Getting started</h2>
-<p>The code for the CURE ID project is hosted on <a href="https://github.com/">GitHub</a>. GitHub is a web-based platform that allows developers to host, review, and collaborate on code repositories. It is widely used for version control and source code management, and it provides features such as issue tracking, wikis, and project management tools to facilitate team collaboration.&nbsp;</p>
-<p>The repository containing the code and concept sets can be accessed at <a href="https://github.com/OHDSI/CureIdRegistry">OHDSI/CureIdRegistry</a> There are four branches within the repository that differ only in the clinical variables included in the cohort curation scripts. Be sure to select the appropriate branch based on individual health system data and ETL capacity:</p>
-<ol type="1">
-<li>Main branch: fundamental set of variables for Registry submission - demographics, comorbidities, vitals, labs, medications, vaccinations, oxygen devices, viral assays, and COVID complications.</li>
-<li>Refresh Basic: the main branch variables with additional concepts to allow for Charlson Comorbidity Index calculation</li>
-<li>Refresh Advanced: the refresh basic branch variables with additional concepts for Area Deprivation Index calculation (this branch requires Geocoding patient addresses to determine Census Blocks)</li>
-<li>Main CDM v5.3: this is the same set of variables included in the main branch but with cohort curation scripts written for the OMOP CDM version 5.3 (there are four fields names that changed from version 5.3 to 5.4)</li>
-</ol>
-</section>
-<section id="cure-id-technical-support-checklist" class="level2">
-<h2 class="anchored" data-anchor-id="cure-id-technical-support-checklist">CURE ID technical support checklist</h2>
-<ol type="1">
-<li>Core site team identified and technical kickoff call scheduled</li>
-<li>Determine feasibility of using <a href="https://github.com/OHDSI/CureIdRegistry/blob/main/EdgeToolSuite.md">Edge Tool Suite</a></li>
-<li>If using Edge Tool Suite is not possible, has the site determined a path forward, for example using Spectrum Health Scripts?</li>
-<li>Members of core team send proof of course completion to Danielle Boyce for the following free EHDEN academy courses:
-<ul>
-<li><a href="https://academy.ehden.eu/course/view.php?id=4">Course: OMOP CDM and Standardised Vocabularies (ehden.eu)</a></li>
-<li><a href="https://academy.ehden.eu/course/view.php?id=7">Course: Extract, Transform and Load (ehden.eu)</a></li>
-</ul></li>
-<li>Site Completes CURE ID Manual OMOP Data Mapping Template</li>
-<li>JHU reviews steps for performing ETL process by walking through GitHub scripts</li>
-<li>Meetings with JHU software contractors arranged, if needed</li>
-<li>Site confirms that they are using most recent GitHub scripts before proceeding</li>
-<li>Data Quality Dashboard Run</li>
-<li>JSON and script output sent to Danielle Boyce</li>
-<li>DQD and concept counts approved or issues identified and reviewed with technical team</li>
-<li>DQD and concept counts re-run and approved by JHU technical team</li>
-<li>Run CURE ID scripts (see OMOP Cohort Creation and De-identification Guide)</li>
-<li>De-identified data exported to CSV file</li>
-<li>JHU/C-Path technical team reviews CSV files before transfer</li>
-<li>Any caveats in the data documented in Data Export Cover Sheet</li>
-<li>Data transfer arrangements made by contacting Smitty Heavner</li>
-</ol>
-</section>
-<section id="omop-extract-transform-and-load-guide" class="level2">
-<h2 class="anchored" data-anchor-id="omop-extract-transform-and-load-guide">OMOP Extract, Transform, and Load Guide</h2>
-<section id="ohdsi-etl-resources" class="level3">
-<h3 class="anchored" data-anchor-id="ohdsi-etl-resources"><u>OHDSI ETL Resources</u></h3>
-<ul>
-<li><a href="https://www.ohdsi.org/web/wiki/doku.php?id=documentation:etl_best_practices">OHDSI Wiki: ETL Creation Best Practices</a></li>
-<li><a href="Book of OHDSI - Ch.6 Extract Transform Load">Book of OHDSI (Ch. 6): Extract Transform Load</a></li>
-<li><a href="https://academy.ehden.eu/enrol/index.php?id=4">EHDEN Academy: OMOP CDM and Standardised Vocabularies</a></li>
-<li><a href="https://academy.ehden.eu/course/view.php?id=7">EHDEN Academy: Extract, Transform and Load</a></li>
-<li><a href="https://academy.ehden.eu/enrol/index.php?id=18">EHDEN Academy: Introduction to Usagi &amp; Code Mappings for an ETL</a></li>
-</ul>
-</section>
-<section id="ohdsi-etl-steps" class="level3">
-<h3 class="anchored" data-anchor-id="ohdsi-etl-steps"><u>OHDSI ETL Steps</u></h3>
-<ol type="1">
-<li><p><strong>Find your people.</strong></p>
-<ol type="a">
-<li>Assemble ETL team: both data experts, medical experts, CDM/vocabulary experts</li>
-<li>Assign persons with medical knowledge to create code mappings</li>
-<li>Assign persons with technical knowledge to implement the ETL</li>
-<li>Schedule regular meetings for quality control maintenance</li>
-</ol></li>
-<li><p><strong>Understand your data.</strong></p>
-<ol type="a">
-<li>Take inventory of source data (tools: <a href="https://github.com/OHDSI/WhiteRabbit">White Rabbit</a>)
-<ol type="i">
-<li>List of tables in database</li>
-<li>List fields in each table</li>
-<li>List distinct values of each field</li>
-<li>Summarize the frequency of each value of each field.</li>
-</ol></li>
-<li>Define relationships between source data tables and fields (tools: <a href="https://github.com/OHDSI/WhiteRabbit">Rabbit-in-a-Hat</a>)
-<ol type="i">
-<li>Record both relationship definition decisions and reasoning behind these decisions</li>
-</ol></li>
-<li>Determine standardized vocabularies that already exist in your source data (ICD-10, CPT, HCPCS, LOINC, etc.)
-<ol type="i">
-<li>Many commonly used standardized coding systems have already been mapped to the OMOP vocabulary – utilize the work done by others across the OHDSI community to accelerate the process of mapping your data systems to OMOP.</li>
-</ol></li>
-<li>Determine the coding systems in your source data that are proprietary or not already mapped to OMOP (proprietary patient/visit identifiers, account numbers, charge codes, etc.)</li>
-</ol></li>
-<li><p><strong>Map your codes to OMOP concepts.</strong></p>
-<ol type="a">
-<li>Summarize the frequency of each code from your source data code sets that will require mapping to OMOP concepts.</li>
-<li>Create your source data to OMOP mapping. (tools: <a href="https://github.com/OHDSI/Usagi">Usagi</a>)
-<ol type="i">
-<li>Assign this task to the ETL team members with appropriate medical knowledge to discern which codes are most synonymous based on their descriptions. Medical knowledge is key for this step as semantic understanding of clinical descriptions is required to make decisions on mapping source data concepts to OMOP concepts.</li>
-<li>Start with the most frequently used codes and determine your threshold of code frequency to include in the mapping.</li>
-<li>Focus on a particular project or clinical domain to limit the scope of data needed for capture and conversion to OMOP.</li>
-<li>Utilize the Usagi tool for mapping suggestions and searching based on similarity of code descriptions.</li>
-</ol></li>
-</ol></li>
-<li><p><strong>OMOPify your data!</strong></p>
-<ol type="a">
-<li>Determine the technology and software used or approved at your site for data storage, querying, and transfer. Determine the tools and technologies that team members and internal staff have expertise in.</li>
-<li>Generate the OMOP DDLs
-<ol type="i">
-<li>Using R: https://github.com/OHDSI/CommonDataModel</li>
-<li>Using SQL: https://github.com/OHDSI/CommonDataModel/tree/v5.4.0/inst/ddl/5.4</li>
-</ol></li>
-<li>Implement the ETL.
-<ol type="i">
-<li>Assign this task to the ETL team members with technical knowledge and permission for accessing and extracting source data and writing to a database.</li>
-<li>Many tools and technologies can be used for this step. Utilize the existing tools, technologies, and expertise of your ETL team and internal staff.</li>
-</ol></li>
-</ol></li>
-<li><p><strong>Evaluate your data.</strong></p>
-<ol type="a">
-<li>Involve everyone in the evaluation and maintenance of ETL and data quality.</li>
-<li>Review the ETL design documentation, computer code used in implementation, and concept mappings</li>
-<li>Perform a manual audit using a sample of patients from both source data and derived OMOP data</li>
-<li>Compare summary level counts of key fields between source data and OMOP derived data. (tools: Achilles)</li>
-</ol></li>
-</ol>
-<p><strong>★ Ask for help along the way!</strong></p>
-<p>The CURE ID support team is here to help you. We also encourage you to connect with the OHDSI community to find others with experience, expertise, and guidance for each step of your ETL to OMOP journey. The open, collaborative community of OHDSI is the most powerful tool at your disposal. Use it (us)!</p>
-</section>
-<section id="places-to-connect" class="level3">
-<h3 class="anchored" data-anchor-id="places-to-connect"><u>Places to Connect</u></h3>
-<ul>
-<li><p>OHDSI.org: https://www.ohdsi.org/</p></li>
-<li><p>OHDSI Wiki: https://www.ohdsi.org/web/wiki/doku.php</p></li>
-<li><p>OHDSI Forums: https://forums.ohdsi.org/</p></li>
-<li><p>OHDSI Workgroups: https://www.ohdsi.org/workgroups/</p></li>
-</ul>
 
 
-</section>
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

@@ -10,6 +10,7 @@ website:
       - section: "Intro"
         contents:
           - index.qmd
+          - intro.qmd
       - section: "Process"
         contents:
           - sop.qmd

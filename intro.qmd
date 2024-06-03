@@ -1,0 +1,131 @@
+---
+title: "Getting Started"
+date-modified: last-modified
+bibliography: references.bib
+---
+
+## Welcome
+
+This site is designed to provide guidance, scripts and resources for sites transitioning data to OMOP common data model as part of CURE ID.
+
+CURE ID is a platform designed and developed by the US Food and Drug Administration (FDA) and the National Institutes of Health (NIH) National Center for Translational Sciences (NCATS) to capture real world data (RWD) about how existing drugs are used in new ways (e.g., drug repurposing) to treat diseases of high unmet clinical need. The documentation on this site is part of a project funded by the US Department of Health and Human Services (HHS) Assistant Secretary for Planning and Evaluation (ASPE)'s Patient-Centered Outcomes Research Trust Fund (under Interagency Agreement #75F40121S35006) to develop and disseminate tools facilitating the extraction of RWD from the electronic health record (EHR).
+
+## Introduction
+
+The goals of OMOP are to gain better understanding of human health by improving our ability to analyze observational health data.
+
+Health data is stored by individual health systems in unique ways which limits the ability to collaborate and learn from larger populations. This is a problem because certain clinical conditions are infrequent and it is important to have sufficient number of cases to perform statistical tests. De-identified data shared across institutions has the promise of allowing scientists to develop important insights about health which is the motivation to enable greater collaboration.
+
+#### What is a common data model?
+
+A common data model (CDM) allows multiple health care systems with their individual databases to join forces creating greater populations which can power more compelling scientific studies. A simple way to think about this is the difficulty of finding the silverware drawer in a new kitchen -- if there is a unifying rule for where the silverware drawer is located in every kitchen (immediately to right of the sink) it makes it possible to find this much easier. A common data model creates a system so that data elements like "systolic blood pressure" or "sepsis" are recorded and organized in the same way. OMOP stands for Observational Medical Outcomes Partnership and is the common data model of the [Observational Health Data Sciences and Informatics](https://www.ohdsi.org/) program.
+
+#### What is an ETL?
+
+ETL stands for Extract, Transform, and Load. Essentially this is the process of mapping data from one system to another. Please see \[The Book of OHDSI, Chapter 6\] (https://ohdsi.github.io/TheBookOfOhdsi/ExtractTransformLoad.html).
+
+## Getting started
+
+The code for the CURE ID project is hosted on [GitHub](https://github.com/). GitHub is a web-based platform that allows developers to host, review, and collaborate on code repositories. It is widely used for version control and source code management, and it provides features such as issue tracking, wikis, and project management tools to facilitate team collaboration. 
+
+The repository containing the code and concept sets can be accessed at [OHDSI/CureIdRegistry](https://github.com/OHDSI/CureIdRegistry) There are four branches within the repository that differ only in the clinical variables included in the cohort curation scripts. Be sure to select the appropriate branch based on individual health system data and ETL capacity:
+
+1.  Main branch: fundamental set of variables for Registry submission - demographics, comorbidities, vitals, labs, medications, vaccinations, oxygen devices, viral assays, and COVID complications.
+2.  Refresh Basic: the main branch variables with additional concepts to allow for Charlson Comorbidity Index calculation
+3.  Refresh Advanced: the refresh basic branch variables with additional concepts for Area Deprivation Index calculation (this branch requires Geocoding patient addresses to determine Census Blocks)
+4.  Main CDM v5.3: this is the same set of variables included in the main branch but with cohort curation scripts written for the OMOP CDM version 5.3 (there are four fields names that changed from version 5.3 to 5.4)
+
+## CURE ID technical support checklist
+
+1.  Core site team identified and technical kickoff call scheduled
+2.  Determine feasibility of using [Edge Tool Suite](https://github.com/OHDSI/CureIdRegistry/blob/main/EdgeToolSuite.md)
+3.  If using Edge Tool Suite is not possible, has the site determined a path forward, for example using Spectrum Health Scripts?
+4.  Members of core team send proof of course completion to Danielle Boyce for the following free EHDEN academy courses:
+    -   [Course: OMOP CDM and Standardised Vocabularies (ehden.eu)](https://academy.ehden.eu/course/view.php?id=4)
+    -   [Course: Extract, Transform and Load (ehden.eu)](https://academy.ehden.eu/course/view.php?id=7)
+5.  Site Completes CURE ID Manual OMOP Data Mapping Template
+6.  JHU reviews steps for performing ETL process by walking through GitHub scripts
+7.  Meetings with JHU software contractors arranged, if needed
+8.  Site confirms that they are using most recent GitHub scripts before proceeding
+9.  Data Quality Dashboard Run
+10. JSON and script output sent to Danielle Boyce
+11. DQD and concept counts approved or issues identified and reviewed with technical team
+12. DQD and concept counts re-run and approved by JHU technical team
+13. Run CURE ID scripts (see OMOP Cohort Creation and De-identification Guide)
+14. De-identified data exported to CSV file
+15. JHU/C-Path technical team reviews CSV files before transfer
+16. Any caveats in the data documented in Data Export Cover Sheet
+17. Data transfer arrangements made by contacting Smitty Heavner
+
+## OMOP Extract, Transform, and Load Guide
+
+### [OHDSI ETL Resources]{.underline}
+
+-   [OHDSI Wiki: ETL Creation Best Practices](https://www.ohdsi.org/web/wiki/doku.php?id=documentation:etl_best_practices)
+-   [Book of OHDSI (Ch. 6): Extract Transform Load](Book%20of%20OHDSI%20-%20Ch.6%20Extract%20Transform%20Load)
+-   [EHDEN Academy: OMOP CDM and Standardised Vocabularies](https://academy.ehden.eu/enrol/index.php?id=4)
+-   [EHDEN Academy: Extract, Transform and Load](https://academy.ehden.eu/course/view.php?id=7)
+-   [EHDEN Academy: Introduction to Usagi & Code Mappings for an ETL](https://academy.ehden.eu/enrol/index.php?id=18)
+
+### [OHDSI ETL Steps]{.underline}
+
+1.  **Find your people.**
+
+    a.  Assemble ETL team: both data experts, medical experts, CDM/vocabulary experts
+    b.  Assign persons with medical knowledge to create code mappings
+    c.  Assign persons with technical knowledge to implement the ETL
+    d.  Schedule regular meetings for quality control maintenance
+
+2.  **Understand your data.**
+
+    a.  Take inventory of source data (tools: [White Rabbit](https://github.com/OHDSI/WhiteRabbit))
+        i.  List of tables in database
+        ii. List fields in each table
+        iii. List distinct values of each field
+        iv. Summarize the frequency of each value of each field.
+    b.  Define relationships between source data tables and fields (tools: [Rabbit-in-a-Hat](https://github.com/OHDSI/WhiteRabbit))
+        i.  Record both relationship definition decisions and reasoning behind these decisions
+    c.  Determine standardized vocabularies that already exist in your source data (ICD-10, CPT, HCPCS, LOINC, etc.)
+        i.  Many commonly used standardized coding systems have already been mapped to the OMOP vocabulary -- utilize the work done by others across the OHDSI community to accelerate the process of mapping your data systems to OMOP.
+    d.  Determine the coding systems in your source data that are proprietary or not already mapped to OMOP (proprietary patient/visit identifiers, account numbers, charge codes, etc.)
+
+3.  **Map your codes to OMOP concepts.**
+
+    a.  Summarize the frequency of each code from your source data code sets that will require mapping to OMOP concepts.
+    b.  Create your source data to OMOP mapping. (tools: [Usagi](https://github.com/OHDSI/Usagi))
+        i.  Assign this task to the ETL team members with appropriate medical knowledge to discern which codes are most synonymous based on their descriptions. Medical knowledge is key for this step as semantic understanding of clinical descriptions is required to make decisions on mapping source data concepts to OMOP concepts.
+        ii. Start with the most frequently used codes and determine your threshold of code frequency to include in the mapping.
+        iii. Focus on a particular project or clinical domain to limit the scope of data needed for capture and conversion to OMOP.
+        iv. Utilize the Usagi tool for mapping suggestions and searching based on similarity of code descriptions.
+
+4.  **OMOPify your data!**
+
+    a.  Determine the technology and software used or approved at your site for data storage, querying, and transfer. Determine the tools and technologies that team members and internal staff have expertise in.
+    b.  Generate the OMOP DDLs
+        i.  Using R: https://github.com/OHDSI/CommonDataModel
+        ii. Using SQL: https://github.com/OHDSI/CommonDataModel/tree/v5.4.0/inst/ddl/5.4
+    c.  Implement the ETL.
+        i.  Assign this task to the ETL team members with technical knowledge and permission for accessing and extracting source data and writing to a database.
+        ii. Many tools and technologies can be used for this step. Utilize the existing tools, technologies, and expertise of your ETL team and internal staff.
+
+5.  **Evaluate your data.**
+
+    a.  Involve everyone in the evaluation and maintenance of ETL and data quality.
+    b.  Review the ETL design documentation, computer code used in implementation, and concept mappings
+    c.  Perform a manual audit using a sample of patients from both source data and derived OMOP data
+    d.  Compare summary level counts of key fields between source data and OMOP derived data. (tools: Achilles)
+
+**★ Ask for help along the way!**
+
+The CURE ID support team is here to help you. We also encourage you to connect with the OHDSI community to find others with experience, expertise, and guidance for each step of your ETL to OMOP journey. The open, collaborative community of OHDSI is the most powerful tool at your disposal. Use it (us)!
+
+### [Places to Connect]{.underline}
+
+-   OHDSI.org: https://www.ohdsi.org/
+
+-   OHDSI Wiki: https://www.ohdsi.org/web/wiki/doku.php
+
+-   OHDSI Forums: https://forums.ohdsi.org/
+
+-   OHDSI Workgroups: https://www.ohdsi.org/workgroups/
+

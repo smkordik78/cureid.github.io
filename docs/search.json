@@ -66,69 +66,69 @@
     ]
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "C-PATH / JH guide to getting started with OMOP for CURE ID",
+    "objectID": "intro.html",
+    "href": "intro.html",
+    "title": "Getting Started",
     "section": "",
     "text": "This site is designed to provide guidance, scripts and resources for sites transitioning data to OMOP common data model as part of CURE ID.\nCURE ID is a platform designed and developed by the US Food and Drug Administration (FDA) and the National Institutes of Health (NIH) National Center for Translational Sciences (NCATS) to capture real world data (RWD) about how existing drugs are used in new ways (e.g., drug repurposing) to treat diseases of high unmet clinical need. The documentation on this site is part of a project funded by the US Department of Health and Human Services (HHS) Assistant Secretary for Planning and Evaluation (ASPE)’s Patient-Centered Outcomes Research Trust Fund (under Interagency Agreement #75F40121S35006) to develop and disseminate tools facilitating the extraction of RWD from the electronic health record (EHR).",
     "crumbs": [
       "Intro",
-      "C-PATH / JH guide to getting started with OMOP for CURE ID"
+      "Getting Started"
     ]
   },
   {
-    "objectID": "index.html#welcome",
-    "href": "index.html#welcome",
-    "title": "C-PATH / JH guide to getting started with OMOP for CURE ID",
+    "objectID": "intro.html#welcome",
+    "href": "intro.html#welcome",
+    "title": "Getting Started",
     "section": "",
     "text": "This site is designed to provide guidance, scripts and resources for sites transitioning data to OMOP common data model as part of CURE ID.\nCURE ID is a platform designed and developed by the US Food and Drug Administration (FDA) and the National Institutes of Health (NIH) National Center for Translational Sciences (NCATS) to capture real world data (RWD) about how existing drugs are used in new ways (e.g., drug repurposing) to treat diseases of high unmet clinical need. The documentation on this site is part of a project funded by the US Department of Health and Human Services (HHS) Assistant Secretary for Planning and Evaluation (ASPE)’s Patient-Centered Outcomes Research Trust Fund (under Interagency Agreement #75F40121S35006) to develop and disseminate tools facilitating the extraction of RWD from the electronic health record (EHR).",
     "crumbs": [
       "Intro",
-      "C-PATH / JH guide to getting started with OMOP for CURE ID"
+      "Getting Started"
     ]
   },
   {
-    "objectID": "index.html#introduction",
-    "href": "index.html#introduction",
-    "title": "C-PATH / JH guide to getting started with OMOP for CURE ID",
+    "objectID": "intro.html#introduction",
+    "href": "intro.html#introduction",
+    "title": "Getting Started",
     "section": "Introduction",
     "text": "Introduction\nThe goals of OMOP are to gain better understanding of human health by improving our ability to analyze observational health data.\nHealth data is stored by individual health systems in unique ways which limits the ability to collaborate and learn from larger populations. This is a problem because certain clinical conditions are infrequent and it is important to have sufficient number of cases to perform statistical tests. De-identified data shared across institutions has the promise of allowing scientists to develop important insights about health which is the motivation to enable greater collaboration.\n\nWhat is a common data model?\nA common data model (CDM) allows multiple health care systems with their individual databases to join forces creating greater populations which can power more compelling scientific studies. A simple way to think about this is the difficulty of finding the silverware drawer in a new kitchen – if there is a unifying rule for where the silverware drawer is located in every kitchen (immediately to right of the sink) it makes it possible to find this much easier. A common data model creates a system so that data elements like “systolic blood pressure” or “sepsis” are recorded and organized in the same way. OMOP stands for Observational Medical Outcomes Partnership and is the common data model of the Observational Health Data Sciences and Informatics program.\n\n\nWhat is an ETL?\nETL stands for Extract, Transform, and Load. Essentially this is the process of mapping data from one system to another. Please see [The Book of OHDSI, Chapter 6] (https://ohdsi.github.io/TheBookOfOhdsi/ExtractTransformLoad.html).",
     "crumbs": [
       "Intro",
-      "C-PATH / JH guide to getting started with OMOP for CURE ID"
+      "Getting Started"
     ]
   },
   {
-    "objectID": "index.html#getting-started",
-    "href": "index.html#getting-started",
-    "title": "C-PATH / JH guide to getting started with OMOP for CURE ID",
+    "objectID": "intro.html#getting-started",
+    "href": "intro.html#getting-started",
+    "title": "Getting Started",
     "section": "Getting started",
     "text": "Getting started\nThe code for the CURE ID project is hosted on GitHub. GitHub is a web-based platform that allows developers to host, review, and collaborate on code repositories. It is widely used for version control and source code management, and it provides features such as issue tracking, wikis, and project management tools to facilitate team collaboration. \nThe repository containing the code and concept sets can be accessed at OHDSI/CureIdRegistry There are four branches within the repository that differ only in the clinical variables included in the cohort curation scripts. Be sure to select the appropriate branch based on individual health system data and ETL capacity:\n\nMain branch: fundamental set of variables for Registry submission - demographics, comorbidities, vitals, labs, medications, vaccinations, oxygen devices, viral assays, and COVID complications.\nRefresh Basic: the main branch variables with additional concepts to allow for Charlson Comorbidity Index calculation\nRefresh Advanced: the refresh basic branch variables with additional concepts for Area Deprivation Index calculation (this branch requires Geocoding patient addresses to determine Census Blocks)\nMain CDM v5.3: this is the same set of variables included in the main branch but with cohort curation scripts written for the OMOP CDM version 5.3 (there are four fields names that changed from version 5.3 to 5.4)",
     "crumbs": [
       "Intro",
-      "C-PATH / JH guide to getting started with OMOP for CURE ID"
+      "Getting Started"
     ]
   },
   {
-    "objectID": "index.html#cure-id-technical-support-checklist",
-    "href": "index.html#cure-id-technical-support-checklist",
-    "title": "C-PATH / JH guide to getting started with OMOP for CURE ID",
+    "objectID": "intro.html#cure-id-technical-support-checklist",
+    "href": "intro.html#cure-id-technical-support-checklist",
+    "title": "Getting Started",
     "section": "CURE ID technical support checklist",
     "text": "CURE ID technical support checklist\n\nCore site team identified and technical kickoff call scheduled\nDetermine feasibility of using Edge Tool Suite\nIf using Edge Tool Suite is not possible, has the site determined a path forward, for example using Spectrum Health Scripts?\nMembers of core team send proof of course completion to Danielle Boyce for the following free EHDEN academy courses:\n\nCourse: OMOP CDM and Standardised Vocabularies (ehden.eu)\nCourse: Extract, Transform and Load (ehden.eu)\n\nSite Completes CURE ID Manual OMOP Data Mapping Template\nJHU reviews steps for performing ETL process by walking through GitHub scripts\nMeetings with JHU software contractors arranged, if needed\nSite confirms that they are using most recent GitHub scripts before proceeding\nData Quality Dashboard Run\nJSON and script output sent to Danielle Boyce\nDQD and concept counts approved or issues identified and reviewed with technical team\nDQD and concept counts re-run and approved by JHU technical team\nRun CURE ID scripts (see OMOP Cohort Creation and De-identification Guide)\nDe-identified data exported to CSV file\nJHU/C-Path technical team reviews CSV files before transfer\nAny caveats in the data documented in Data Export Cover Sheet\nData transfer arrangements made by contacting Smitty Heavner",
     "crumbs": [
       "Intro",
-      "C-PATH / JH guide to getting started with OMOP for CURE ID"
+      "Getting Started"
     ]
   },
   {
-    "objectID": "index.html#omop-extract-transform-and-load-guide",
-    "href": "index.html#omop-extract-transform-and-load-guide",
-    "title": "C-PATH / JH guide to getting started with OMOP for CURE ID",
+    "objectID": "intro.html#omop-extract-transform-and-load-guide",
+    "href": "intro.html#omop-extract-transform-and-load-guide",
+    "title": "Getting Started",
     "section": "OMOP Extract, Transform, and Load Guide",
     "text": "OMOP Extract, Transform, and Load Guide\n\nOHDSI ETL Resources\n\nOHDSI Wiki: ETL Creation Best Practices\nBook of OHDSI (Ch. 6): Extract Transform Load\nEHDEN Academy: OMOP CDM and Standardised Vocabularies\nEHDEN Academy: Extract, Transform and Load\nEHDEN Academy: Introduction to Usagi & Code Mappings for an ETL\n\n\n\nOHDSI ETL Steps\n\nFind your people.\n\nAssemble ETL team: both data experts, medical experts, CDM/vocabulary experts\nAssign persons with medical knowledge to create code mappings\nAssign persons with technical knowledge to implement the ETL\nSchedule regular meetings for quality control maintenance\n\nUnderstand your data.\n\nTake inventory of source data (tools: White Rabbit)\n\nList of tables in database\nList fields in each table\nList distinct values of each field\nSummarize the frequency of each value of each field.\n\nDefine relationships between source data tables and fields (tools: Rabbit-in-a-Hat)\n\nRecord both relationship definition decisions and reasoning behind these decisions\n\nDetermine standardized vocabularies that already exist in your source data (ICD-10, CPT, HCPCS, LOINC, etc.)\n\nMany commonly used standardized coding systems have already been mapped to the OMOP vocabulary – utilize the work done by others across the OHDSI community to accelerate the process of mapping your data systems to OMOP.\n\nDetermine the coding systems in your source data that are proprietary or not already mapped to OMOP (proprietary patient/visit identifiers, account numbers, charge codes, etc.)\n\nMap your codes to OMOP concepts.\n\nSummarize the frequency of each code from your source data code sets that will require mapping to OMOP concepts.\nCreate your source data to OMOP mapping. (tools: Usagi)\n\nAssign this task to the ETL team members with appropriate medical knowledge to discern which codes are most synonymous based on their descriptions. Medical knowledge is key for this step as semantic understanding of clinical descriptions is required to make decisions on mapping source data concepts to OMOP concepts.\nStart with the most frequently used codes and determine your threshold of code frequency to include in the mapping.\nFocus on a particular project or clinical domain to limit the scope of data needed for capture and conversion to OMOP.\nUtilize the Usagi tool for mapping suggestions and searching based on similarity of code descriptions.\n\n\nOMOPify your data!\n\nDetermine the technology and software used or approved at your site for data storage, querying, and transfer. Determine the tools and technologies that team members and internal staff have expertise in.\nGenerate the OMOP DDLs\n\nUsing R: https://github.com/OHDSI/CommonDataModel\nUsing SQL: https://github.com/OHDSI/CommonDataModel/tree/v5.4.0/inst/ddl/5.4\n\nImplement the ETL.\n\nAssign this task to the ETL team members with technical knowledge and permission for accessing and extracting source data and writing to a database.\nMany tools and technologies can be used for this step. Utilize the existing tools, technologies, and expertise of your ETL team and internal staff.\n\n\nEvaluate your data.\n\nInvolve everyone in the evaluation and maintenance of ETL and data quality.\nReview the ETL design documentation, computer code used in implementation, and concept mappings\nPerform a manual audit using a sample of patients from both source data and derived OMOP data\nCompare summary level counts of key fields between source data and OMOP derived data. (tools: Achilles)\n\n\n★ Ask for help along the way!\nThe CURE ID support team is here to help you. We also encourage you to connect with the OHDSI community to find others with experience, expertise, and guidance for each step of your ETL to OMOP journey. The open, collaborative community of OHDSI is the most powerful tool at your disposal. Use it (us)!\n\n\nPlaces to Connect\n\nOHDSI.org: https://www.ohdsi.org/\nOHDSI Wiki: https://www.ohdsi.org/web/wiki/doku.php\nOHDSI Forums: https://forums.ohdsi.org/\nOHDSI Workgroups: https://www.ohdsi.org/workgroups/",
     "crumbs": [
       "Intro",
-      "C-PATH / JH guide to getting started with OMOP for CURE ID"
+      "Getting Started"
     ]
   },
   {
