@@ -7,11 +7,11 @@ bibliography: references.bib
 # Cure ID Concept Mapping Support
 
 
-# Identifying Oxygen Devices in Epic/Clarity
+## Identifying Oxygen Devices in Epic/Clarity
 
 [Identifying Oxygen Devices Flowsheet Measures to Map to OMOP Concepts](https://userweb.epic.com/Thread/118440/Identifying-Oxygen-Devices-Flowsheet-Measures-to-Map-to-OMOP/)
 
-# Geocoding and Integrating SDOH Data  
+## Geocoding and Integrating SDOH Data  
 To link geocoded addresses to the Neighborhood Atlas for getting the Area Deprivation Index (ADI) for patients in a dataset, you will typically follow these steps:
 
 1. Prepare Your Dataset
@@ -53,7 +53,7 @@ is_standard = C
 include_descendents = False
 
 
-# OHDSI Tool Suite
+## OHDSI Tool Suite
 
 The Edge Tool Suite are a set of OHDSI tools that should be deployed by the site that provide value around the OMOP CDM. This work was funded by the CURE ID initiative <https://cure.ncats.io>
 
@@ -127,7 +127,7 @@ In tandem with Perseus, OHDSI HADES and OHDSI ATLAS are the two projects within 
 
 <https://github.com/OHDSI/DataQualityDashboard>
 
-# Best Practices
+## Best Practices
 
 Data Quality Dos and Don'ts
 
@@ -141,21 +141,21 @@ Data Quality Dos and Don'ts
 
 -   Duplicated results have been reported at some sites when running script 02_CURE_ID_ALL_Tables.sql. However, at this time no root cause has been found. There is some belief that adding DISTINCT to the various SELECT statements could resolve the issue, while there is some concern over the latest updates to script 00_CURE_ID_create_concept_table.sql as it has standard concepts as well as standard descendants. Be sure to review your data carefully and report any signs of duplication so that it can be investigated.
 
-# Manuscripts
+## Manuscripts
 
 [Heavner SF, Anderson W, Kashyap R, Dasher P, Mathé EA, Merson L, Guerin PJ, Weaver J, Robinson M, Schito M, Kumar VK, Nagy P. A Path to Real-World Evidence in Critical Care Using Open-Source Data Harmonization Tools. Crit Care Explor. 2023 Apr 3;5(4):e0893. doi: 10.1097/CCE.0000000000000893. PMID: 37025303; PMCID: PMC10072311.](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10072311/pdf/cc9-5-e0893.pdf)
 
-# Webinars
+## Webinars
 
 {{< video https://www.youtube.com/watch?v=H8Ur1xzVjS0 >}}
 
-# OMOP Scripts for Epic
+## OMOP Scripts for Epic
 
 ["The Spectrum Code"](https://userweb.epic.com/User/788dbdff-6712-4b16-aabc-98cdb1be4ff9): scripts and documentation created by Roger Carlson at Corewell Health
 
 [RUMC OMOP transition scripts from Clarity, Caboodle](https://userweb.epic.com/User/788dbdff-6712-4b16-aabc-98cdb1be4ff9): Code created by Rush University Medical Center
 
-# Using synthetic data
+## Using synthetic data
 
 [MIMIC-IV](https://physionet.org/content/mimic-iv-demo-omop/0.9/1_omop_data_csv/#files-panel) 100-patient demo dataset based on MIMIC to create a OMOP instance
 
@@ -163,7 +163,7 @@ Data Quality Dos and Don'ts
 
 [Eunomia](https://ohdsi.github.io/Eunomia/) LInk to the Eunomia GitHub.io site with instructions and standard dataset files
 
-# Useful Resources
+## Useful Resources
 
 [Web site for the OHDSI community](https://www.ohdsi.org/): http://www.ohdsi.org
 

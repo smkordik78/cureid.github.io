@@ -184,7 +184,8 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#cure-id-concept-mapping-support" id="toc-cure-id-concept-mapping-support" class="nav-link active" data-scroll-target="#cure-id-concept-mapping-support">Cure ID Concept Mapping Support</a></li>
+  <li><a href="#cure-id-concept-mapping-support" id="toc-cure-id-concept-mapping-support" class="nav-link active" data-scroll-target="#cure-id-concept-mapping-support">Cure ID Concept Mapping Support</a>
+  <ul class="collapse">
   <li><a href="#identifying-oxygen-devices-in-epicclarity" id="toc-identifying-oxygen-devices-in-epicclarity" class="nav-link" data-scroll-target="#identifying-oxygen-devices-in-epicclarity">Identifying Oxygen Devices in Epic/Clarity</a></li>
   <li><a href="#geocoding-and-integrating-sdoh-data" id="toc-geocoding-and-integrating-sdoh-data" class="nav-link" data-scroll-target="#geocoding-and-integrating-sdoh-data">Geocoding and Integrating SDOH Data</a>
   <ul class="collapse">
@@ -199,6 +200,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#omop-scripts-for-epic" id="toc-omop-scripts-for-epic" class="nav-link" data-scroll-target="#omop-scripts-for-epic">OMOP Scripts for Epic</a></li>
   <li><a href="#using-synthetic-data" id="toc-using-synthetic-data" class="nav-link" data-scroll-target="#using-synthetic-data">Using synthetic data</a></li>
   <li><a href="#useful-resources" id="toc-useful-resources" class="nav-link" data-scroll-target="#useful-resources">Useful Resources</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -232,13 +234,12 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="cure-id-concept-mapping-support" class="level1">
 <h1>Cure ID Concept Mapping Support</h1>
-</section>
-<section id="identifying-oxygen-devices-in-epicclarity" class="level1">
-<h1>Identifying Oxygen Devices in Epic/Clarity</h1>
+<section id="identifying-oxygen-devices-in-epicclarity" class="level2">
+<h2 class="anchored" data-anchor-id="identifying-oxygen-devices-in-epicclarity">Identifying Oxygen Devices in Epic/Clarity</h2>
 <p><a href="https://userweb.epic.com/Thread/118440/Identifying-Oxygen-Devices-Flowsheet-Measures-to-Map-to-OMOP/">Identifying Oxygen Devices Flowsheet Measures to Map to OMOP Concepts</a></p>
 </section>
-<section id="geocoding-and-integrating-sdoh-data" class="level1">
-<h1>Geocoding and Integrating SDOH Data</h1>
+<section id="geocoding-and-integrating-sdoh-data" class="level2">
+<h2 class="anchored" data-anchor-id="geocoding-and-integrating-sdoh-data">Geocoding and Integrating SDOH Data</h2>
 <p>To link geocoded addresses to the Neighborhood Atlas for getting the Area Deprivation Index (ADI) for patients in a dataset, you will typically follow these steps:</p>
 <ol type="1">
 <li>Prepare Your Dataset Patient Data: Ensure you have a dataset of patients with addresses. This data should be anonymized to protect patient privacy. Geocoding: Each address needs to be geocoded. Geocoding is the process of converting addresses into geographic coordinates (latitude and longitude).</li>
@@ -261,8 +262,8 @@ from: https://www.neighborhoodatlas.medicine.wisc.edu/</p>
 <p>ADI is not included as an explicit concept in any of the appropriate standard vocabularies. The OHDSI Vocabularies Team recommended that this information be included in the OMOP data as a custom concept in the Observation table. The workflow will be simply to add a line item to the concept mapping table for Area Deprivation Index like the following example: concept_id = 2000000999 concept_code = NA concept_name = Area deprivation index domain = observation vocabulary = Custom is_standard = C include_descendents = False</p>
 </section>
 </section>
-<section id="ohdsi-tool-suite" class="level1">
-<h1>OHDSI Tool Suite</h1>
+<section id="ohdsi-tool-suite" class="level2">
+<h2 class="anchored" data-anchor-id="ohdsi-tool-suite">OHDSI Tool Suite</h2>
 <p>The Edge Tool Suite are a set of OHDSI tools that should be deployed by the site that provide value around the OMOP CDM. This work was funded by the CURE ID initiative <a href="https://cure.ncats.io" class="uri">https://cure.ncats.io</a></p>
 <p>The OHDSI open source software configured for deployment include:</p>
 <ul>
@@ -324,8 +325,8 @@ from: https://www.neighborhoodatlas.medicine.wisc.edu/</p>
 <p><a href="https://github.com/OHDSI/DataQualityDashboard" class="uri">https://github.com/OHDSI/DataQualityDashboard</a></p>
 </section>
 </section>
-<section id="best-practices" class="level1">
-<h1>Best Practices</h1>
+<section id="best-practices" class="level2">
+<h2 class="anchored" data-anchor-id="best-practices">Best Practices</h2>
 <p>Data Quality Dos and Don’ts</p>
 <ul>
 <li><p>Do install the Data Quality Dashboard early on in the process.</p></li>
@@ -335,27 +336,27 @@ from: https://www.neighborhoodatlas.medicine.wisc.edu/</p>
 <li><p>Duplicated results have been reported at some sites when running script 02_CURE_ID_ALL_Tables.sql. However, at this time no root cause has been found. There is some belief that adding DISTINCT to the various SELECT statements could resolve the issue, while there is some concern over the latest updates to script 00_CURE_ID_create_concept_table.sql as it has standard concepts as well as standard descendants. Be sure to review your data carefully and report any signs of duplication so that it can be investigated.</p></li>
 </ul>
 </section>
-<section id="manuscripts" class="level1">
-<h1>Manuscripts</h1>
+<section id="manuscripts" class="level2">
+<h2 class="anchored" data-anchor-id="manuscripts">Manuscripts</h2>
 <p><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10072311/pdf/cc9-5-e0893.pdf">Heavner SF, Anderson W, Kashyap R, Dasher P, Mathé EA, Merson L, Guerin PJ, Weaver J, Robinson M, Schito M, Kumar VK, Nagy P. A Path to Real-World Evidence in Critical Care Using Open-Source Data Harmonization Tools. Crit Care Explor. 2023 Apr 3;5(4):e0893. doi: 10.1097/CCE.0000000000000893. PMID: 37025303; PMCID: PMC10072311.</a></p>
 </section>
-<section id="webinars" class="level1">
-<h1>Webinars</h1>
+<section id="webinars" class="level2">
+<h2 class="anchored" data-anchor-id="webinars">Webinars</h2>
 <div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/H8Ur1xzVjS0" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
 </section>
-<section id="omop-scripts-for-epic" class="level1">
-<h1>OMOP Scripts for Epic</h1>
+<section id="omop-scripts-for-epic" class="level2">
+<h2 class="anchored" data-anchor-id="omop-scripts-for-epic">OMOP Scripts for Epic</h2>
 <p><a href="https://userweb.epic.com/User/788dbdff-6712-4b16-aabc-98cdb1be4ff9">“The Spectrum Code”</a>: scripts and documentation created by Roger Carlson at Corewell Health</p>
 <p><a href="https://userweb.epic.com/User/788dbdff-6712-4b16-aabc-98cdb1be4ff9">RUMC OMOP transition scripts from Clarity, Caboodle</a>: Code created by Rush University Medical Center</p>
 </section>
-<section id="using-synthetic-data" class="level1">
-<h1>Using synthetic data</h1>
+<section id="using-synthetic-data" class="level2">
+<h2 class="anchored" data-anchor-id="using-synthetic-data">Using synthetic data</h2>
 <p><a href="https://physionet.org/content/mimic-iv-demo-omop/0.9/1_omop_data_csv/#files-panel">MIMIC-IV</a> 100-patient demo dataset based on MIMIC to create a OMOP instance</p>
 <p><a href="https://github.com/OHDSI/ETL-Synthea">Synthea</a> GitHub site with files to use the synthetic patient generator Synthea</p>
 <p><a href="https://ohdsi.github.io/Eunomia/">Eunomia</a> LInk to the Eunomia GitHub.io site with instructions and standard dataset files</p>
 </section>
-<section id="useful-resources" class="level1">
-<h1>Useful Resources</h1>
+<section id="useful-resources" class="level2">
+<h2 class="anchored" data-anchor-id="useful-resources">Useful Resources</h2>
 <p><a href="https://www.ohdsi.org/">Web site for the OHDSI community</a>: http://www.ohdsi.org</p>
 <p><a href="https://ohdsi.github.io/TheBookOfOhdsi/">The Book of OHDSI:</a> What is OHDSI and why should I care?</p>
 <p><a href="https://academy.ehden.eu/">EHDEN Academy</a> : EHDEN Academy is a site with courses for developing skills working with OHDSI</p>
@@ -374,6 +375,7 @@ from: https://www.neighborhoodatlas.medicine.wisc.edu/</p>
 <p><a href="https://www.ohdsi.org/2022showcase-79/">How to develop capacity for observational research within a health system</a> Presentation on building capacity from 2022 OHDSI Collaborator Showcase</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
