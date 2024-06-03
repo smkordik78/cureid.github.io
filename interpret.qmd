@@ -1,5 +1,7 @@
 ---
 title: "Interpretation"
+date-modified: last-modified
+bibliography: references.bib
 ---
 
 ## CURE ID Profile Scripts -- Output & Interpretation

@@ -1,18 +1,11 @@
 ---
 title: "Support"
+date-modified: last-modified
+bibliography: references.bib
 ---
 
 # Cure ID Concept Mapping Support
 
-![](images/CureID_Concept_Mapping_Process.png)
-
-#### Collaborative OMOP Concept Mapping Process
-
-1.  CureID clinical informaticists work with each site to manually map internal concepts to OMOP concepts outlined for capture in the project plan.
-
-2.  The combined concepts from all sites are maintained as a single, updated concept set using the OHDSI ATLAS open-source tool.
-
-3.  All concepts currently identified by the work between CureID staff and each site, and all corresponding descendant concepts are exported from ATLAS as .json or .csv files for use in cohort creation, profiling, and clinical registry submission.
 
 # Identifying Oxygen Devices in Epic/Clarity
 

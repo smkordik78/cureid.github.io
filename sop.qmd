@@ -1,12 +1,10 @@
 ---
 title: "Procedure"
+date-modified: last-modified
+bibliography: references.bib
 ---
 
 ## OMOP Cohort Creation and De-identification Guide
-
-```{r, echo=FALSE}
-message("Updated: 7/26/2023")
-```
 
 The following scripts are to be run on a site's full OMOP dataset in order to prepare the relevant data for sharing with the VIRUS registry. Each script should be run on the same server as the OMOP data but can be customized to run on the preferred Database and Schema.
 
