@@ -3,12 +3,19 @@ project:
   output-dir: docs
 website:
   title: "CURE ID"
-  navbar:
-    left:
-      - href: "index.qmd"
-        text: "Home"
-      - href: "about.qmd"
-        text: "About"
+  sidebar:
+    style: "docked"
+    search: true
+    contents:
+      - section: "Intro"
+        contents:
+          - index.qmd
+      - section: "Process"
+        contents:
+          - sop.qmd
+      - section: "Support"
+        contents:
+          - about.qmd
 
 format:
   html:
