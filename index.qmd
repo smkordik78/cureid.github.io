@@ -1,5 +1,7 @@
 ---
 title: "CURE ID"
+date-modified: last-modified
+bibliography: references.bib
 ---
 
 ![](images/CureID_Concept_Mapping_Process.png)
