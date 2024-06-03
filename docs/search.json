@@ -158,18 +158,7 @@
     "href": "intro.html",
     "title": "Getting Started",
     "section": "",
-    "text": "This site is designed to provide guidance, scripts and resources for sites transitioning data to OMOP common data model as part of CURE ID.\nCURE ID is a platform designed and developed by the US Food and Drug Administration (FDA) and the National Institutes of Health (NIH) National Center for Translational Sciences (NCATS) to capture real world data (RWD) about how existing drugs are used in new ways (e.g., drug repurposing) to treat diseases of high unmet clinical need. The documentation on this site is part of a project funded by the US Department of Health and Human Services (HHS) Assistant Secretary for Planning and Evaluation (ASPE)’s Patient-Centered Outcomes Research Trust Fund (under Interagency Agreement #75F40121S35006) to develop and disseminate tools facilitating the extraction of RWD from the electronic health record (EHR).",
-    "crumbs": [
-      "Intro",
-      "Getting Started"
-    ]
-  },
-  {
-    "objectID": "intro.html#welcome",
-    "href": "intro.html#welcome",
-    "title": "Getting Started",
-    "section": "",
-    "text": "This site is designed to provide guidance, scripts and resources for sites transitioning data to OMOP common data model as part of CURE ID.\nCURE ID is a platform designed and developed by the US Food and Drug Administration (FDA) and the National Institutes of Health (NIH) National Center for Translational Sciences (NCATS) to capture real world data (RWD) about how existing drugs are used in new ways (e.g., drug repurposing) to treat diseases of high unmet clinical need. The documentation on this site is part of a project funded by the US Department of Health and Human Services (HHS) Assistant Secretary for Planning and Evaluation (ASPE)’s Patient-Centered Outcomes Research Trust Fund (under Interagency Agreement #75F40121S35006) to develop and disseminate tools facilitating the extraction of RWD from the electronic health record (EHR).",
+    "text": "The goals of OMOP are to gain better understanding of human health by improving our ability to analyze observational health data.\nHealth data is stored by individual health systems in unique ways which limits the ability to collaborate and learn from larger populations. This is a problem because certain clinical conditions are infrequent and it is important to have sufficient number of cases to perform statistical tests. De-identified data shared across institutions has the promise of allowing scientists to develop important insights about health which is the motivation to enable greater collaboration.\n\n\nA common data model (CDM) allows multiple health care systems with their individual databases to join forces creating greater populations which can power more compelling scientific studies. A simple way to think about this is the difficulty of finding the silverware drawer in a new kitchen – if there is a unifying rule for where the silverware drawer is located in every kitchen (immediately to right of the sink) it makes it possible to find this much easier. A common data model creates a system so that data elements like “systolic blood pressure” or “sepsis” are recorded and organized in the same way. OMOP stands for Observational Medical Outcomes Partnership and is the common data model of the Observational Health Data Sciences and Informatics program.\n\n\n\nETL stands for Extract, Transform, and Load. Essentially this is the process of mapping data from one system to another. Please see [The Book of OHDSI, Chapter 6] (https://ohdsi.github.io/TheBookOfOhdsi/ExtractTransformLoad.html).",
     "crumbs": [
       "Intro",
       "Getting Started"
@@ -179,8 +168,8 @@
     "objectID": "intro.html#introduction",
     "href": "intro.html#introduction",
     "title": "Getting Started",
-    "section": "Introduction",
-    "text": "Introduction\nThe goals of OMOP are to gain better understanding of human health by improving our ability to analyze observational health data.\nHealth data is stored by individual health systems in unique ways which limits the ability to collaborate and learn from larger populations. This is a problem because certain clinical conditions are infrequent and it is important to have sufficient number of cases to perform statistical tests. De-identified data shared across institutions has the promise of allowing scientists to develop important insights about health which is the motivation to enable greater collaboration.\n\nWhat is a common data model?\nA common data model (CDM) allows multiple health care systems with their individual databases to join forces creating greater populations which can power more compelling scientific studies. A simple way to think about this is the difficulty of finding the silverware drawer in a new kitchen – if there is a unifying rule for where the silverware drawer is located in every kitchen (immediately to right of the sink) it makes it possible to find this much easier. A common data model creates a system so that data elements like “systolic blood pressure” or “sepsis” are recorded and organized in the same way. OMOP stands for Observational Medical Outcomes Partnership and is the common data model of the Observational Health Data Sciences and Informatics program.\n\n\nWhat is an ETL?\nETL stands for Extract, Transform, and Load. Essentially this is the process of mapping data from one system to another. Please see [The Book of OHDSI, Chapter 6] (https://ohdsi.github.io/TheBookOfOhdsi/ExtractTransformLoad.html).",
+    "section": "",
+    "text": "The goals of OMOP are to gain better understanding of human health by improving our ability to analyze observational health data.\nHealth data is stored by individual health systems in unique ways which limits the ability to collaborate and learn from larger populations. This is a problem because certain clinical conditions are infrequent and it is important to have sufficient number of cases to perform statistical tests. De-identified data shared across institutions has the promise of allowing scientists to develop important insights about health which is the motivation to enable greater collaboration.\n\n\nA common data model (CDM) allows multiple health care systems with their individual databases to join forces creating greater populations which can power more compelling scientific studies. A simple way to think about this is the difficulty of finding the silverware drawer in a new kitchen – if there is a unifying rule for where the silverware drawer is located in every kitchen (immediately to right of the sink) it makes it possible to find this much easier. A common data model creates a system so that data elements like “systolic blood pressure” or “sepsis” are recorded and organized in the same way. OMOP stands for Observational Medical Outcomes Partnership and is the common data model of the Observational Health Data Sciences and Informatics program.\n\n\n\nETL stands for Extract, Transform, and Load. Essentially this is the process of mapping data from one system to another. Please see [The Book of OHDSI, Chapter 6] (https://ohdsi.github.io/TheBookOfOhdsi/ExtractTransformLoad.html).",
     "crumbs": [
       "Intro",
       "Getting Started"
@@ -224,6 +213,28 @@
     "href": "index.html",
     "title": "CURE ID",
     "section": "",
+    "text": "This site is designed to provide guidance, scripts and resources for sites transitioning data to OMOP common data model as part of CURE ID.\nCURE ID is a platform designed and developed by the US Food and Drug Administration (FDA) and the National Institutes of Health (NIH) National Center for Translational Sciences (NCATS) to capture real world data (RWD) about how existing drugs are used in new ways (e.g., drug repurposing) to treat diseases of high unmet clinical need. The documentation on this site is part of a project funded by the US Department of Health and Human Services (HHS) Assistant Secretary for Planning and Evaluation (ASPE)’s Patient-Centered Outcomes Research Trust Fund (under Interagency Agreement #75F40121S35006) to develop and disseminate tools facilitating the extraction of RWD from the electronic health record (EHR).",
+    "crumbs": [
+      "Intro",
+      "CURE ID"
+    ]
+  },
+  {
+    "objectID": "index.html#welcome",
+    "href": "index.html#welcome",
+    "title": "CURE ID",
+    "section": "",
+    "text": "This site is designed to provide guidance, scripts and resources for sites transitioning data to OMOP common data model as part of CURE ID.\nCURE ID is a platform designed and developed by the US Food and Drug Administration (FDA) and the National Institutes of Health (NIH) National Center for Translational Sciences (NCATS) to capture real world data (RWD) about how existing drugs are used in new ways (e.g., drug repurposing) to treat diseases of high unmet clinical need. The documentation on this site is part of a project funded by the US Department of Health and Human Services (HHS) Assistant Secretary for Planning and Evaluation (ASPE)’s Patient-Centered Outcomes Research Trust Fund (under Interagency Agreement #75F40121S35006) to develop and disseminate tools facilitating the extraction of RWD from the electronic health record (EHR).",
+    "crumbs": [
+      "Intro",
+      "CURE ID"
+    ]
+  },
+  {
+    "objectID": "index.html#collaborative-omop-concept-mapping-process",
+    "href": "index.html#collaborative-omop-concept-mapping-process",
+    "title": "CURE ID",
+    "section": "Collaborative OMOP Concept Mapping Process",
     "text": "Collaborative OMOP Concept Mapping Process\n\nCureID clinical informaticists work with each site to manually map internal concepts to OMOP concepts outlined for capture in the project plan.\nThe combined concepts from all sites are maintained as a single, updated concept set using the OHDSI ATLAS open-source tool.\nAll concepts currently identified by the work between CureID staff and each site, and all corresponding descendant concepts are exported from ATLAS as .json or .csv files for use in cohort creation, profiling, and clinical registry submission.",
     "crumbs": [
       "Intro",
